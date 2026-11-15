@@ -28,6 +28,18 @@
     setTimeout(hideIntro, 6000); // never keep visitors waiting longer than this
   }
 
+  /* ---------- Hero stats: appear once the visitor starts scrolling ---------- */
+  const scrollReveal = document.querySelectorAll("[data-scroll-reveal]");
+  if (scrollReveal.length) {
+    const show = () => {
+      if (window.scrollY < 24) return;
+      scrollReveal.forEach((el) => el.classList.add("is-in"));
+      window.removeEventListener("scroll", show);
+    };
+    window.addEventListener("scroll", show, { passive: true });
+    show(); // already scrolled (e.g. page reloaded mid-way, or opened at #section)
+  }
+
   /* ---------- Nav: scrolled state, mobile menu, active link ---------- */
   const nav = document.querySelector(".nav");
   const toggle = document.querySelector(".nav__toggle");
