@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScaNoa — Smart virtual fitting for clothing stores</title>
+    <meta
+      name="description"
+      content="ScaNoa is a smart fitting mirror for clothing stores. Shoppers scan once, drop their picks on the tray, and see which size fits — before the fitting room."
+    />
+    <meta name="theme-color" content="#05070b" />
+
+    <!-- Social sharing preview (update the URL once your .lk domain is live) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="ScaNoa — Find your fit. Skip the queue."
+    />
+    <meta
+      property="og:description"
+      content="The smart fitting mirror that tells shoppers which size fits — in seconds."
+    />
+    <meta property="og:image" content="https://scanoa.lk/assets/og-image.jpg" />
+    <meta property="og:url" content="https://scanoa.lk/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/icon-512.png"
+    />
+    <link rel="preload" as="image" href="assets/logo-full.webp" />
+    <link rel="preload" as="image" href="assets/logo-word-lg.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Loading screen: ScaNoa logo shown every time the site opens, until the page has loaded -->
+    <div class="intro" role="status" aria-label="Loading ScaNoa">
+      <div class="intro__glow"></div>
+      <img
+        class="intro__logo"
+        src="assets/logo-full.webp"
+        alt=""
+        width="1200"
+        height="1150"
+      />
+      <div class="intro__bar"><span></span></div>
+    </div>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="top">
+      <div class="wrap nav__inner">
+        <a href="#top" class="brand" aria-label="ScaNoa home">
+          <img
+            class="brand__mark"
+            src="assets/logo-mark.webp"
+            alt=""
+            width="470"
+            height="512"
+          />
+          <img
+            class="brand__word"
+            src="assets/logo-word.webp"
+            alt="ScaNoa"
+            width="996"
+            height="160"
+          />
+        </a>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#how">How it works</a>
+          <a href="#video">Watch</a>
+          <a href="#demo">Try it</a>
+          <a href="#stores">For stores</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta"
+          >Get ScaNoa</a
+        >
+        <button
+          class="nav__toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+        <a href="#how">How it works</a>
+        <a href="#video">Watch</a>
+        <a href="#demo">Try it</a>
+        <a href="#stores">For stores</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn btn--primary">Get ScaNoa</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+        <div class="hero__laser" aria-hidden="true"></div>
+        <div class="wrap hero__center">
+          <h1 class="hero__brand reveal">
+            <img
+              class="hero__word"
+              src="assets/logo-word-lg.webp"
+              alt="ScaNoa"
+              width="1497"
+              height="254"
+              fetchpriority="high"
+            />
+            <img
+              class="hero__tagimg"
+              src="assets/logo-tagline.webp"
+              alt="Try before you change"
+              width="1481"
+              height="56"
+            />
+          </h1>
+          <p class="lead reveal">
+            The smart fitting mirror that tells shoppers which size fits —
+            before they ever step into a fitting room. One quick scan, and no
+            more carrying three sizes in to find the right one.
+          </p>
+          <div class="hero__ctas reveal">
+            <a href="#contact" class="btn btn--primary"
+              >Get ScaNoa for your store</a
+            >
+            <a href="#how" class="btn btn--ghost">See how it works</a>
+          </div>
+          <ul class="hero__stats reveal">
+            <li><b>AI</b><span>Body scan</span></li>
+            <li><b>RFID</b><span>Instant garment ID</span></li>
+            <li><b>0</b><span>Photos stored</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TICKER ============ -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span>No queues</span><span>No guesswork</span
+          ><span>No repeat try-ons</span><span>Your size in seconds</span
+          ><span>Shop with confidence</span> <span>No queues</span
+          ><span>No guesswork</span><span>No repeat try-ons</span
+          ><span>Your size in seconds</span><span>Shop with confidence</span>
+        </div>
+      </div>
+
+      <!-- ============ PROBLEM ============ -->
+      <section class="section" id="problem">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <p class="eyebrow">Sound familiar?</p>
+            <h2>Shopping for clothes shouldn't feel like work.</h2>
+          </div>
+          <div class="grid grid--3">
+            <article class="card reveal">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              </div>
+              <h3>The fitting-room line</h3>
+              <p>
+                Saturday afternoon, five people ahead of you, and an arm full of
+                clothes you're not even sure about.
+              </p>
+            </article>
+            <article class="card reveal">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 9a3 3 0 1 1 4 2.8c-.6.3-1 .9-1 1.6V14" />
+                  <circle cx="12" cy="17.5" r=".6" />
+                  <circle cx="12" cy="12" r="9" />
+                </svg>
+              </div>
+              <h3>"Am I an M or an L?"</h3>
+              <p>
+                Every brand sizes differently. The label says M, but will it
+                actually fit <em>you</em>?
+              </p>
+            </article>
+            <article class="card reveal">
+              <div class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 4v6h6" />
+                  <path d="M20 20v-6h-6" />
+                  <path d="M5 15a8 8 0 0 0 14 3M19 9A8 8 0 0 0 5 6" />
+                </svg>
+              </div>
+              <h3>Back out, try again</h3>
+              <p>
+                Wrong size. Get dressed, find another, queue again. Most of us
+                just give up and leave.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HOW IT WORKS ============ -->
+      <section class="section section--alt" id="how">
+        <div class="wrap split">
+          <div class="split__media reveal">
+            <div class="frame">
+              <img
+                src="assets/body-scan.webp"
+                alt="Illustration of a body scan with measurement lines across the shoulders, chest and waist"
+                width="1376"
+                height="768"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="split__copy">
+            <div class="section__head section__head--left reveal">
+              <p class="eyebrow">How it works</p>
+              <h2>Three steps. Zero hassle.</h2>
+            </div>
+            <ol class="steps">
+              <li class="reveal">
+                <span class="steps__n">01</span>
+                <div>
+                  <h3>Stand in front of the mirror</h3>
+                  <p>
+                    A quick scan reads your measurements. Stay fully dressed: no
+                    tape measure, no changing room.
+                  </p>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="steps__n">02</span>
+                <div>
+                  <h3>Drop your picks on the tray</h3>
+                  <p>
+                    Put down everything you like. ScaNoa recognises every item
+                    instantly, with no scanning or barcodes.
+                  </p>
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="steps__n">03</span>
+                <div>
+                  <h3>See what fits</h3>
+                  <p>
+                    Watch it on your virtual self and get a clear answer for
+                    each item: <b>fits well</b>, <b>runs tight</b> or
+                    <b>runs loose</b>, plus which size to grab instead.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ VIDEO ============ -->
+      <!-- To add your video: paste the YouTube video ID into data-youtube-id below.
+         e.g. for https://www.youtube.com/watch?v=dQw4w9WgXcQ the ID is dQw4w9WgXcQ -->
+      <section class="section" id="video">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <p class="eyebrow">Watch</p>
+            <h2>See ScaNoa in action.</h2>
+            <p class="sub">From scan to the perfect size in under a minute.</p>
+          </div>
+          <div class="video reveal" data-youtube-id="">
+            <button
+              class="video__poster"
+              type="button"
+              aria-label="Play the ScaNoa video"
+            >
+              <img
+                src="assets/fit-screen.webp"
+                alt=""
+                width="1376"
+                height="768"
+                loading="lazy"
+              />
+              <span class="video__play" aria-hidden="true"
+                ><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg
+              ></span>
+              <span class="video__label">Watch the video</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DEMO ============ -->
+      <section class="section section--alt" id="demo">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <p class="eyebrow">Get a feel for it</p>
+            <h2>What would ScaNoa tell you?</h2>
+            <p class="sub">
+              Set some measurements, pick a shirt and a size, and see the kind
+              of answer you'll get. In store, the mirror measures you
+              automatically.
+            </p>
+          </div>
+
+          <div class="demo reveal">
+            <div class="demo__controls">
+              <fieldset>
+                <legend>Your measurements</legend>
+                <label class="range">
+                  <span>Chest <output id="chestOut">98</output> cm</span>
+                  <input
+                    type="range"
+                    id="chest"
+                    min="80"
+                    max="120"
+                    value="98"
+                  />
+                </label>
+                <label class="range">
+                  <span>Waist <output id="waistOut">84</output> cm</span>
+                  <input
+                    type="range"
+                    id="waist"
+                    min="64"
+                    max="112"
+                    value="84"
+                  />
+                </label>
+                <label class="range">
+                  <span>Shoulder <output id="shoulderOut">45</output> cm</span>
+                  <input
+                    type="range"
+                    id="shoulder"
+                    min="38"
+                    max="54"
+                    value="45"
+                  />
+                </label>
+              </fieldset>
+
+              <fieldset>
+                <legend>On the tray</legend>
+                <div
+                  class="seg"
+                  role="radiogroup"
+                  aria-label="Garment"
+                  id="garmentSeg"
+                >
+                  <button
+                    type="button"
+                    role="radio"
+                    aria-checked="true"
+                    data-garment="shirt"
+                  >
+                    Linen shirt
+                  </button>
+                  <button
+                    type="button"
+                    role="radio"
+                    aria-checked="false"
+                    data-garment="tee"
+                  >
+                    Slim T-shirt
+                  </button>
+                </div>
+                <div
+                  class="seg seg--sizes"
+                  role="radiogroup"
+                  aria-label="Size"
+                  id="sizeSeg"
+                ></div>
+              </fieldset>
+            </div>
+
+            <div class="demo__result" aria-live="polite">
+              <div class="result__top">
+                <div>
+                  <span class="result__label">You picked</span>
+                  <span class="result__item" id="selItem">Linen shirt · M</span>
+                </div>
+                <span class="pill" id="overall">—</span>
+              </div>
+              <ul class="zones" id="zones"></ul>
+              <div class="reco" id="reco"></div>
+              <p class="fine">Sample sizes shown.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FOR SHOPPERS / STORES ============ -->
+      <section class="section" id="stores">
+        <div class="wrap">
+          <div class="section__head reveal">
+            <p class="eyebrow">Made for both sides of the counter</p>
+            <h2>Better for shoppers. Better for stores.</h2>
+          </div>
+          <div class="audience">
+            <article class="aud reveal">
+              <span class="tag">For shoppers</span>
+              <h3>Walk in with the right size.</h3>
+              <ul class="ticks">
+                <li>Know your size before you queue</li>
+                <li>See it on your virtual self</li>
+                <li>Spend less time changing, more time shopping</li>
+                <li>Buy with confidence</li>
+              </ul>
+            </article>
+            <article class="aud aud--store reveal">
+              <span class="tag">For stores</span>
+              <h3>Turn fitting rooms into a highlight.</h3>
+              <ul class="ticks">
+                <li>Shorter fitting-room queues at peak hours</li>
+                <li>Fewer garments to re-fold and re-hang</li>
+                <li>More confident buyers, fewer walk-outs</li>
+                <li>An in-store experience online shops can't match</li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost"
+                >Bring ScaNoa to your store</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SHOWCASE + PRIVACY ============ -->
+      <section class="section section--alt" id="privacy">
+        <div class="wrap split split--rev">
+          <div class="split__copy">
+            <div class="section__head section__head--left reveal">
+              <p class="eyebrow">Privacy by design</p>
+              <h2>Your scan is yours. And then it's gone.</h2>
+              <p class="sub">
+                A smart mirror should be trusted first. ScaNoa is built around
+                three simple promises.
+              </p>
+            </div>
+            <ul class="promises">
+              <li class="reveal">
+                <span class="promises__n">1</span>
+                <div>
+                  <b>Nothing happens without your OK.</b> You choose to start a
+                  scan.
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="promises__n">2</span>
+                <div>
+                  <b>No photos are kept.</b> Only the measurements needed to
+                  check your fit.
+                </div>
+              </li>
+              <li class="reveal">
+                <span class="promises__n">3</span>
+                <div>
+                  <b>Wiped when you walk away.</b> Your data is deleted the
+                  moment your session ends.
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="split__media reveal">
+            <div class="frame">
+              <img
+                src="assets/fit-screen.webp"
+                alt="Concept of the ScaNoa mirror screen showing a virtual body outline with fit feedback"
+                width="1376"
+                height="768"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="section" id="faq">
+        <div class="wrap wrap--narrow">
+          <div class="section__head reveal">
+            <p class="eyebrow">Questions</p>
+            <h2>Good to know.</h2>
+          </div>
+          <div class="faq">
+            <details class="reveal">
+              <summary>
+                Do shoppers need to change clothes to be scanned?
+              </summary>
+              <p>
+                No. They stay fully dressed. For the best result, bulky layers
+                like jackets come off before the scan.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>Will it replace trying clothes on?</summary>
+              <p>
+                It's a shortcut. ScaNoa helps shoppers pick the right size
+                first, so anyone who still wants to try something on only takes
+                in the one that fits.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>What happens to the body scan?</summary>
+              <p>
+                No photos are stored. Measurements are used only for that
+                session and deleted when it ends.
+              </p>
+            </details>
+            <details class="reveal">
+              <summary>I run a clothing store. How do I get ScaNoa?</summary>
+              <p>
+                Send us a message using the form below and we'll get back to you
+                about setting up ScaNoa in your store.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section section--cta" id="contact">
+        <div class="wrap waitlist reveal">
+          <h2>Less waiting. <span class="grad">Smarter fitting.</span></h2>
+          <p class="sub">
+            Bring ScaNoa to your store. Tell us a little about your business and
+            we'll be in touch.
+          </p>
+
+          <!-- Set data-endpoint to your Formspree (or similar) URL to receive messages.
+             With no endpoint, it opens the visitor's email app instead. -->
+          <form
+            class="form"
+            id="contactForm"
+            data-endpoint=""
+            data-mailto="hello@scanoa.lk"
+            novalidate
+          >
+            <div class="form__row">
+              <label
+                >Name<input
+                  name="name"
+                  required
+                  autocomplete="name"
+                  placeholder="Your name"
+              /></label>
+              <label
+                >Store / company<input
+                  name="store"
+                  autocomplete="organization"
+                  placeholder="Store name"
+              /></label>
+            </div>
+            <div class="form__row">
+              <label
+                >Email<input
+                  name="email"
+                  type="email"
+                  required
+                  autocomplete="email"
+                  placeholder="you@example.com"
+              /></label>
+              <label
+                >Phone<input
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="+94 7X XXX XXXX"
+              /></label>
+            </div>
+            <label
+              >Message<textarea
+                name="message"
+                rows="4"
+                placeholder="How many stores, which city, any questions…"
+              ></textarea>
+            </label>
+            <button class="btn btn--primary btn--block" type="submit">
+              Send message
+            </button>
+            <p class="form__status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="wrap footer__grid">
+        <div class="footer__col footer__col--brand">
+          <a href="#top" class="footer__logo" aria-label="ScaNoa home"
+            ><img
+              src="assets/logo-full.webp"
+              alt="ScaNoa — Try before you change"
+              width="1200"
+              height="1150"
+              loading="lazy"
+          /></a>
+          <p class="footer__about">
+            ScaNoa is a smart fitting mirror for clothing stores. A quick body
+            scan and an RFID tray tell shoppers which size fits, before the
+            fitting room.
+          </p>
+          <!-- Social links: replace each href with your profile URL. Delete any you don't use. -->
+          <nav class="socials" aria-label="ScaNoa on social media">
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" class="fill" />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Facebook"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.tiktok.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+            >
+              <svg viewBox="0 0 24 24">
+                <path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5" />
+                <path d="M14 3c.4 2.6 2.2 4.4 5 4.6" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+            >
+              <svg viewBox="0 0 24 24">
+                <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+                <path d="M10 9.2v5.6l4.8-2.8z" class="fill" />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="3" />
+                <path
+                  d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5c0-1.7 1-3 2.5-3S17 11.5 17 13v4"
+                />
+              </svg>
+            </a>
+          </nav>
+        </div>
+
+        <nav class="footer__col" aria-label="Product">
+          <h3>Product</h3>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#video">Watch the video</a></li>
+            <li><a href="#demo">Try the size demo</a></li>
+            <li><a href="#stores">For stores</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Help">
+          <h3>Help</h3>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#privacy">Privacy promise</a></li>
+            <li><a href="#contact">Book a demo</a></li>
+            <li><a href="#contact">Partner with us</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h3>Contact</h3>
+          <!-- Replace the phone number with your real one (or delete the line) -->
+          <ul class="footer__contact">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="M3 7l9 6 9-6" /></svg
+              ><a href="mailto:hello@scanoa.lk">hello@scanoa.lk</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"
+                /></svg
+              ><a href="tel:+94000000000">+94 XX XXX XXXX</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" />
+                <circle cx="12" cy="10" r="2.5" /></svg
+              ><span>Colombo, Sri Lanka</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--sm footer__cta"
+            >Get ScaNoa for your store</a
+          >
+        </div>
+      </div>
+
+      <div class="wrap footer__bottom">
+        <p>© <span id="year">2026</span> ScaNoa. All rights reserved.</p>
+        <p class="footer__tag">Try before you change.</p>
+        <a href="#top" class="footer__top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
