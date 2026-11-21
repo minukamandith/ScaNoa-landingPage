@@ -1,38 +1,92 @@
-# ScaNoa landing page
+# ScaNoa — Landing Page
 
-A static site (plain HTML, CSS and JS, no build step). Open `index.html` in a browser to preview it.
+**Try before you change.**
+
+The marketing website for **ScaNoa**, a smart fitting mirror for clothing stores.
+
+---
+
+## About ScaNoa
+
+Finding the right size is the slowest part of buying clothes in a store. Fitting-room queues get long at peak hours, sizes vary from brand to brand, and shoppers end up carrying several sizes in just to find one that fits.
+
+ScaNoa is a smart fitting station designed to fix that:
+
+- **AI body scan:** a quick camera scan estimates the shopper's body measurements. Shoppers stay fully dressed.
+- **Instant garment ID:** an RFID tray recognises every garment placed on it at once, with no barcode scanning.
+- **Size recommendation:** each garment's real measurements are compared with the shopper's, and the screen shows whether it fits well, runs tight or runs loose, and which size to pick instead.
+- **Virtual fit preview:** an on-screen preview shows how the garment is likely to fit.
+- **Privacy by design:** nothing is scanned without consent, no photos are kept, and measurement data is deleted when the session ends.
+
+## About this website
+
+A fast, fully responsive landing page that introduces ScaNoa to shoppers and clothing retailers.
+
+### Page sections
+
+1. **Opening section:** ScaNoa wordmark, introduction and key highlights
+2. **The problem:** the everyday frustrations of in-store clothes shopping
+3. **How it works:** the three-step ScaNoa experience
+4. **Video:** ScaNoa in action
+5. **Interactive size demo:** visitors set measurements, pick a garment and size, and see the kind of fit feedback ScaNoa gives
+6. **For shoppers and for stores:** benefits for both audiences
+7. **Privacy promise:** how ScaNoa handles personal data
+8. **Team:** the people behind ScaNoa
+9. **FAQ**
+
+Every "Get ScaNoa" button opens a **contact form pop-up** for stores and partners, so visitors never lose their place on the page.
+
+### Website features
+
+- Branded loading screen with the ScaNoa logo
+- Contact form in a pop-up window, which slides up from the bottom on phones
+- Responsive layout that adapts to screens from small phones to ultra-wide monitors
+- Sharp vector wordmark at any screen resolution
+- Browser tab icon designed for both light and dark browser themes
+- Scroll-triggered animations, with reduced motion for visitors who prefer it
+- YouTube video that loads only when played, keeping the page fast
+- Accessible markup: semantic HTML, keyboard-friendly navigation and pop-up, and descriptive labels
+
+## Built with
+
+- **HTML5**
+- **CSS3:** custom properties, Grid and Flexbox
+- **JavaScript:** plain JavaScript, no frameworks or libraries
+- **Fonts:** Space Grotesk and Inter, from Google Fonts
+
+No build step or dependencies.
+
+## Project structure
 
 ```
-index.html     page content
-styles.css     all styling (colours are CSS variables at the top)
-script.js      mobile menu, scroll effects, fit demo, contact form
-assets/        logo (logo-word.svg is the sharp vector wordmark), tab icons for light and
-               dark browsers, images, social preview image
+ScaNoa-landingPage/
+├── index.html          The landing page
+├── styles.css          All styling
+├── script.js           Loading screen, navigation, animations, size demo, video, contact pop-up and form
+├── README.md
+└── assets/
+    ├── logo-full.webp      Full logo with tagline
+    ├── logo-mark.webp      Logo emblem
+    ├── logo-word.svg       ScaNoa wordmark (vector)
+    ├── favicon.svg         Browser tab icon (light and dark themes)
+    ├── favicon-light.png   Tab icon for light browser themes
+    ├── favicon-dark.png    Tab icon for dark browser themes
+    ├── apple-touch-icon.png
+    ├── body-scan.webp      Body scan visual
+    ├── fit-screen.webp     Fit screen visual
+    └── og-image.jpg        Link preview image for social media
 ```
 
-## Before going live — things to fill in
+## Team
 
-1. **Email address**: `hello@scanoa.lk` appears in the footer and on the contact form (`data-mailto`).
-2. **Contact form**: by default it opens the visitor's email app. To receive messages directly,
-   create a free form at formspree.io (or similar) and paste the URL into `data-endpoint=""` on the `<form id="contactForm">`.
-3. **YouTube video**: in `index.html`, find `data-youtube-id=""` and paste your video's ID between the quotes
-   (for `https://www.youtube.com/watch?v=abc123XYZ` the ID is `abc123XYZ`). The video's thumbnail is used automatically,
-   and the video only loads when someone presses play, so the page stays fast.
-4. **Phone number**: in the footer, replace `+94 XX XXX XXXX` and the `tel:` link with your real number (or delete that line).
-5. **Social media**: in the footer, replace each `href` (Instagram, Facebook, TikTok, YouTube, LinkedIn) with your profile URL.
-   Delete the `<a>` for any platform you don't use.
-6. **Domain in meta tags**: update `og:image` and `og:url` in `<head>` if your domain isn't `scanoa.lk`.
+ScaNoa is being developed as a second-year Software Development Group Project (SDGP) by:
 
-## Hosting on a .lk domain
+- Minuka Mandith
+- Inuka Ematiyagoda
+- Thisal Pathirana
+- Sanudhi Wimalasena
+- Sihara Perera
 
-The site is just static files, so any static host works. Free options:
-GitHub Pages, Netlify, Vercel or Cloudflare Pages.
+---
 
-1. **Register the domain** through the LK Domain Registry (domains.lk / nic.lk) or one of its
-   authorised agents. Check current requirements and prices on their site before applying —
-   registration needs identification details and approval can take time, so start early.
-2. **Deploy the site** — e.g. Netlify: drag this folder onto app.netlify.com/drop.
-   GitHub Pages: push the folder to a repo and enable Pages in the repo settings.
-3. **Connect the domain** — add the custom domain in your host's settings, then add the DNS records
-   it gives you (usually an A record for `scanoa.lk` and a CNAME for `www`) in the domain's DNS panel.
-4. **HTTPS** — all of the hosts above issue a free certificate automatically once DNS is pointing at them.
+© 2026 ScaNoa. All rights reserved.
